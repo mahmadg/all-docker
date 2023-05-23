@@ -1,0 +1,5 @@
+docker run -dit --name webserver --restart always -p 80:80 -v /tmp/webpg:/usr/local/apache2/htdocs httpd 
+docker exec -it a8aa305d4d47 /bin/bash
+docker run --name my-db -p 3306:3306 --volume /tmp/db --restart always -e MYSQL_ROOT_PASSWORD=hello123 -d mysql
+docker exec -it my-db mysql -uroot -phello123
+docker cp /path/to/source/file.txt <container_id>:/path/to/destination/
