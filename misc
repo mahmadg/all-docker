@@ -3,3 +3,7 @@ docker exec -it a8aa305d4d47 /bin/bash
 docker run --name my-db -p 3306:3306 --volume /tmp/db --restart always -e MYSQL_ROOT_PASSWORD=hello123 -d mysql
 docker exec -it my-db mysql -uroot -phello123
 docker cp /path/to/source/file.txt <container_id>:/path/to/destination/
+
+
+docker run -p 8000:8000 -e "SPLUNK_PASSWORD=hello123" -e "SPLUNK_START_ARGS=--accept-license" -it splunk/splunk:latest
+/opt/splunk/var/lib/splunk/kvstore/mongo/splunk.key exists
