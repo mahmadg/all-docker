@@ -3,7 +3,13 @@ version: '3'
 services:
 
   web:
-    image: nginx
+    image: httpd
+    ports: 
+     - 8080:80
+    volumes: 
+     - /tmp/webpg:/usr/local/apache2/htdocs
 
   database:
     image: redis
+    ports:
+     - 6379:6379 
