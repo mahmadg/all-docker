@@ -12,48 +12,48 @@ How to install Docker
 https://docs.docker.com/engine/install/centos/
 
 	
-	yum -y install docker
-	systemctl enable docker --now
-	docker - -help
-	docker - -version
-	docker pull - -help
-	docker pull httpd
-	docker images
-	docker ps
-	docker ps -a
+> yum -y install docker
+> systemctl enable docker --now
+> docker - -help
+> docker - -version
+> docker pull - -help
+> docker pull httpd
+> docker images
+> docker ps
+> docker ps -a
 
-	docker search - -filter=stars=3 - -no-trunc - -limit 10 httpd 
-	docker search 463980270363
-	docker pull httpd	(pull the images from docker repo)
-	docker run -p80:8080 - -name linux-tower-web httpd
-	docker exec -it <ID> /bin/bash
-	docker logs <ID>
-	docker build -build-arg city=Edenburg -t ozzie6935/web:latest .
-	docker run -it httpd sh
-	docker run -dit --name webserver -h webserver --link peach:peach  busybox sh
-	docker run -dit --name webserver -h peech -p 8080:80 dd85cdbb9987
-	docker run -dit --name webserver - -volume=’/usr/src/app/’ -h peech -p 8080:80 dd85cdbb9987 - -restart always
-	docker run -dit -p 80:80 -v /tmp/webpg:/usr/local/apache2/htdocs httpd - -restart always
-	docker system prune -a 		(to delete everything)
-	docker login?
-	docker stop ID
-	docker build .
-	docker build -t mahmadg/simpleweb .
-	docker tag <Image-ID> <New-name> (to give the name)
-	docker inspect
-	docker stats		(to check the performance like top command)
+> docker search - -filter=stars=3 - -no-trunc - -limit 10 httpd 
+> docker search 463980270363
+> docker pull httpd	(pull the images from docker repo)
+> docker run -p80:8080 - -name linux-tower-web httpd
+> docker exec -it <ID> /bin/bash
+> docker logs <ID>
+> docker build -build-arg city=Edenburg -t ozzie6935/web:latest .
+> docker run -it httpd sh
+> docker run -dit --name webserver -h webserver --link peach:peach  busybox sh
+> docker run -dit --name webserver -h peech -p 8080:80 dd85cdbb9987
+> docker run -dit --name webserver - -volume=’/usr/src/app/’ -h peech -p 8080:80 dd85cdbb9987 - -restart always
+> docker run -dit -p 80:80 -v /tmp/webpg:/usr/local/apache2/htdocs httpd - -restart always
+> docker system prune -a 		(to delete everything)
+> docker login?
+> docker stop ID
+> docker build .
+> docker build -t mahmadg/simpleweb .
+> docker tag <Image-ID> <New-name> (to give the name)
+> docker inspect
+> docker stats		(to check the performance like top command)
 
 Communications between containers
 
-	docker network ls
-	docker network create mongo-network
-	docker network create web_server - -driver bridge
-	docker inspect web_bridge
-	docker run -dit - -name server - -network web_bridge httpd:latest
-	docker run -dit - -name client - -network web_bridge mysql:latest
-	docker inspect web_bridge
-	docker attach mysql
-	ctrl p q (deattach)
+> docker network ls
+> docker network create mongo-network
+> docker network create web_server - -driver bridge
+> docker inspect web_bridge
+> docker run -dit - -name server - -network web_bridge httpd:latest
+> docker run -dit - -name client - -network web_bridge mysql:latest
+> docker inspect web_bridge
+> docker attach mysql
+> ctrl p q (deattach)
 What is Docker Compose ?
 https://www.youtube.com/watch?v=k900NVwFfcA
 
@@ -72,31 +72,31 @@ https://www.youtube.com/watch?v=HY3WDz6j_hU
 
 MySQL port number=3306
 
-	Docker pull mysql:8
-	docker run  --name my-db -p 3306:3306 - -volume /tmp/db - -restart always  -e MYSQL_ROOT_PASSWORD=hello123 -d mysql:8
-	docker exec 515a99f091e6 mysql - -version
-	docker exec  my-db  mysql -uroot -phello123 -e 'show databases;' 
-	docker exec -it my-db sh (to get into the Linux terminal )
-	docker exec -it my-db mysql -uroot -phello123 (to go to into db)
+> docker pull mysql:8
+> docker run  --name my-db -p 3306:3306 - -volume /tmp/db - -restart always  -e MYSQL_ROOT_PASSWORD=hello123 -d mysql:8
+> docker exec 515a99f091e6 mysql - -version
+> docker exec  my-db  mysql -uroot -phello123 -e 'show databases;' 
+> docker exec -it my-db sh (to get into the Linux terminal )
+> docker exec -it my-db mysql -uroot -phello123 (to go to into db)
 
 Let’s learn Database Now!
-	CREATE DATABASE testDB;
-	use testDB
+> CREATE DATABASE testDB;
+> use testDB
 
 
-	CREATE TABLE Personal_info (PersonID int, LastName varchar(255), FirstName varchar(255), Address varchar(255), City varchar(255));
+> CREATE TABLE Personal_info (PersonID int, LastName varchar(255), FirstName varchar(255), Address varchar(255), City varchar(255));
 
 
-	docker pull wordpress
-	docker run --name w-press --link mysql:mysql1 -p 8080:80 - -restart always -d wordpress
+> docker pull wordpress
+> docker run --name w-press --link mysql:mysql1 -p 8080:80 - -restart always -d wordpress
 
 
 
 What is Jenkins ?
 Jenkins is an open-source automation server which enables developers around the world to reliably build, test, and deploy their software.
 
-	docker run --rm --name jenkins -p 8080:8080 -p 50000:50000 jenkins/jenkins:2.303.1-jdk8
-	
+> docker run --rm --name jenkins -p 8080:8080 -p 50000:50000 jenkins/jenkins:2.303.1-jdk8
+	
 
 
 
