@@ -19,9 +19,9 @@ use dmz_db;
 CREATE TABLE personal_info (personID int, Last_Name varchar(255), First_Name varchar(255), Address varchar(255), City varchar(255), state varchar(255));
 SELECT * FROM personal_info;
 
-INSERT INTO personal_info (personID, Last_Name, First_Name, Address, City) values (1001, 'ahmad', 'maghfoor', '123 xyz street', 'niagara falls', 'new york');
-INSERT INTO personal_info (personID, Last_Name, First_Name, Address, City) values (1002, 'maria', 'alen', '666 queens blvd', 'brooklyn', 'new york');
-INSERT INTO personal_info (personID, Last_Name, First_Name, Address, City) values (1003, 'john', 'pan', '789 ohio street', 'ohio city', 'ohio');
+INSERT INTO personal_info (personID, Last_Name, First_Name, Address, City, state) values (1001, 'ahmad', 'maghfoor', '123 xyz street', 'niagara falls', 'new york');
+INSERT INTO personal_info (personID, Last_Name, First_Name, Address, City, state) values (1002, 'maria', 'alen', '666 queens blvd', 'brooklyn', 'new york');
+INSERT INTO personal_info (personID, Last_Name, First_Name, Address, City, state) values (1003, 'john', 'pan', '789 ohio street', 'ohio city', 'ohio');
 
 
 
