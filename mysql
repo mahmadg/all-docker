@@ -23,6 +23,14 @@ INSERT INTO personal_info (personID, Last_Name, First_Name, Address, City, state
 INSERT INTO personal_info (personID, Last_Name, First_Name, Address, City, state) values (1002, 'maria', 'alen', '666 queens blvd', 'brooklyn', 'new york');
 INSERT INTO personal_info (personID, Last_Name, First_Name, Address, City, state) values (1003, 'john', 'pan', '789 ohio street', 'ohio city', 'ohio');
 
+INSERT INTO personal_info (personID, Last_Name, First_Name, Address, City, state) values (1004, 'latif', 'khalwad', 'jon street', 'long island', 'new york');
+INSERT INTO personal_info (personID, Last_Name, First_Name, Address, City, state) values (1005, 'ghuman', 'noman', '666 queens blvd', 'va city', 'virginia');
+INSERT INTO personal_info (personID, Last_Name, First_Name, Address, City, state) values (1006, 'john', 'pan', '789 ohio street', 'ohio city', 'ohio');
+
+INSERT INTO personal_info values (1007, 'adam', 'salik', '123 xyz street', 'niagara falls', 'new york');
+INSERT INTO personal_info  values (1008, 'maria', 'alen', '666 queens blvd', 'brooklyn', 'new york');
+INSERT INTO personal_info  values (1009, 'john', 'pan', '789 ohio street', 'ohio city', 'ohio');
+
 
 
 
