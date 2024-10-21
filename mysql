@@ -1,1 +1,23 @@
 mysql
+
+docker run --name dmz-db -p 3306:3306 --volume /tmp/dmz-db --restart always -e MYSQL_ROOT_PASSWORD=hello123 -d mysql:latest
+
+docker run -d --name dmz-db -p 3306:3306 --restart=always -e MYSQL_ROOT_PASSWORD=hello123 -e MYSQL_DATABASE=wordpress -e MYSQL_USER=wordpressuser -e MYSQL_PASSWORD=hello123 -v mysql_data:/var/lib/mysql mysql:latest
+
+
+Database:
+docker exec  my-db  mysql -uroot -phello123 -e 'show databases;' 
+docker exec -it my-db sh (to get into the Linux terminal )
+docker exec -it my-db mysql -uroot -phello123 (to go to into db)
+
+
+Let’s learn Database Now!
+CREATE DATABASE testDB;
+use testDB
+
+
+CREATE TABLE Personal_info (PersonID int, LastName varchar(255), FirstName varchar(255), Address varchar(255), City varchar(255));
+SELECT * FROM Personal_info;
+
+
+
