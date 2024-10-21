@@ -1,5 +1,5 @@
 dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 dnf install docker-ce docker-ce-cli containerd.io -y --allowerasing
 systemctl enable docker --now
-mkdir /tmp/webpg
-docker run -dit --restart always -p8080:80 --name linuxdmz-web -v /tmp/webpg:/usr/local/apache2/htdocs httpd
+mkdir /tmp/dmz-web
+docker run -dit --restart always -p8080:80 --name linuxdmz-web -v /tmp/dmz-web:/usr/local/apache2/htdocs httpd
