@@ -6,18 +6,24 @@ docker run -d --name dmz-db -p 3306:3306 --restart=always -e MYSQL_ROOT_PASSWORD
 
 
 Database:
-docker exec  my-db  mysql -uroot -phello123 -e 'show databases;' 
-docker exec -it my-db sh (to get into the Linux terminal )
-docker exec -it my-db mysql -uroot -phello123 (to go to into db)
+docker exec  dmz_db  mysql -uroot -phello123 -e 'show databases;' 
+docker exec -it dmz_db sh (to get into the Linux terminal )
+docker exec -it dmz_db mysql -uroot -phello123 (to go to into db)
 
 
 Let’s learn Database Now!
-CREATE DATABASE testDB;
-use testDB
+CREATE DATABASE dmz_db;
+use dmz_db;
 
 
-CREATE TABLE Personal_info (PersonID int, LastName varchar(255), FirstName varchar(255), Address varchar(255), City varchar(255));
-SELECT * FROM Personal_info;
+CREATE TABLE personal_info (personID int, Last_Name varchar(255), First_Name varchar(255), Address varchar(255), City varchar(255), state varchar(255));
+SELECT * FROM personal_info;
+
+INSERT INTO personal_info (personID, Last_Name, First_Name, Address, City) values (1001, 'ahmad', 'maghfoor', '123 xyz street', 'niagara falls', 'new york');
+INSERT INTO personal_info (personID, Last_Name, First_Name, Address, City) values (1002, 'maria', 'alen', '666 queens blvd', 'brooklyn', 'new york');
+INSERT INTO personal_info (personID, Last_Name, First_Name, Address, City) values (1003, 'john', 'pan', '789 ohio street', 'ohio city', 'ohio');
+
+
 
 
 
