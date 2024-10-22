@@ -1,4 +1,4 @@
-mysql
+emysql
 
 docker run --name dmz_db -p 3306:3306 --volume /tmp/dmz-db --restart always -e MYSQL_ROOT_PASSWORD=hello123 -d mysql:latest
 
