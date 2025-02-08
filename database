@@ -1,0 +1,15 @@
+A database is an organized collection of data that is stored and managed to allow easy access, retrieval, and manipulation. It is used to store structured or unstructured data in a way that ensures efficiency, security, and scalability.
+
+Types of Databases:
+Relational Databases (RDBMS) – Data is stored in tables with rows and columns (e.g., MySQL, PostgreSQL, SQL Server, Oracle).
+NoSQL Databases – Designed for flexible and scalable data storage (e.g., MongoDB, Cassandra, Redis).
+Graph Databases – Store relationships between data in graph structures (e.g., Neo4j).
+Time-Series Databases – Optimized for time-stamped data (e.g., InfluxDB, TimescaleDB).
+Key-Value Stores – Simple databases that use key-value pairs (e.g., Redis, DynamoDB).
+Document-Oriented Databases – Store data as documents (e.g., MongoDB, CouchDB).
+Key Database Concepts:
+Tables, Rows, and Columns (for RDBMS)
+Schemas – Defines the structure of a database.
+Indexes – Improve search speed.
+Queries – SQL (Structured Query Language) is used for retrieving data.
+Transactions – Ensure data integrity using ACID properties (Atomicity, Consistency, Isolation, Durability).
